@@ -16,23 +16,23 @@
 
 package limitlessInfinite.tictactoe.model;
 
-public class GameTable {
+public class Cell {
 
-    private final char[][] table = {
-            {' ', ' ', ' '},
-            {' ', ' ', ' '},
-            {' ', ' ', ' '}
-    };
-
-    public boolean isEmpty(final Cell cell) {
-        return table[cell.getRow()][cell.getCol()] == ' ';
+    public Cell(int row, int col) {
+        this.row = row;
+        this.col = col;
     }
 
-    public char getSign(final Cell cell) {
-        return table[cell.getRow()][cell.getCol()];
+    public int getRow() {
+        return row;
     }
 
-    public void setSign(final Cell cell, final char sign) {
-        table[cell.getRow()][cell.getCol()] = sign;
+    public int getCol() {
+        return col;
     }
+
+    private final int row;
+
+    private final int col;
+
 }
