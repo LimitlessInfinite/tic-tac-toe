@@ -16,9 +16,22 @@
 
 package limitlessInfinite.tictactoe.component;
 
+import limitlessInfinite.tictactoe.model.Cell;
 import limitlessInfinite.tictactoe.model.GameTable;
+
+import java.util.Random;
 
 public class ComputerMove {
     public void make(GameTable gameTable) {
+        while (true) {
+            Random random = new Random();
+            int row = random.nextInt(3);
+            int col = random.nextInt(3);
+            if (gameTable.isEmpty(new Cell(row, col))) {
+                gameTable.setSign(new Cell(row, col), '0');
+                break;
+            }
+
+        }
     }
 }
