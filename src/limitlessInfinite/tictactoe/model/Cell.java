@@ -35,4 +35,11 @@ public class Cell {
 
     private final int col;
 
+    @Override
+    public String toString() {
+        return "Cell{" +
+                "row=" + row +
+                ", col=" + col +
+                '}';
+    }
 }

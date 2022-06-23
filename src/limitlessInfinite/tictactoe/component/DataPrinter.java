@@ -16,15 +16,25 @@
 
 package limitlessInfinite.tictactoe.component;
 
+import limitlessInfinite.tictactoe.model.Cell;
 import limitlessInfinite.tictactoe.model.GameTable;
 
 public class DataPrinter {
 
     public void printMappingTable() {
+        System.out.println("-".repeat(13) + "\n| 7 | 8 | 9 |" + "\n" + "-".repeat(13) + "\n| 4 | 5 | 6 |" + "\n" + "-".repeat(13) + "\n| 1 | 2 | 3 |" + "\n" + "-".repeat(13));
 
     }
 
     public void printGameTable(final GameTable gameTable) {
 
+        for (int i = 0; i < 3; i++) {
+            System.out.println("-".repeat(13));
+            for (int j = 0; j < 3; j++) {
+                System.out.print("| " + gameTable.getSign(new Cell(i, j)) + " ");
+            }
+            System.out.println("|");
+        }
+        System.out.println("-".repeat(13));
     }
 }
