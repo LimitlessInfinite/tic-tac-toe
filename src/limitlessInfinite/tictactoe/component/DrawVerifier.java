@@ -14,15 +14,12 @@
  * # limitations under the License.
  */
 
-package limitlessInfinite.tictactoe;
+package limitlessInfinite.tictactoe.component;
 
-public class DataPrinter {
+import limitlessInfinite.tictactoe.model.GameTable;
 
-    public void printMappingTable() {
-
-    }
-
-    public void printGameTable(final GameTable gameTable) {
-
+public class DrawVerifier {
+    public boolean isDraw(final GameTable gameTable) {
+        return false;
     }
 }

@@ -16,6 +16,8 @@
 
 package limitlessInfinite.tictactoe;
 
+import limitlessInfinite.tictactoe.component.*;
+
 public final class Launcher {
 
     public static void main(String[] args) {

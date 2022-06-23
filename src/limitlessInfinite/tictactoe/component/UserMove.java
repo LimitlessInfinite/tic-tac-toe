@@ -14,14 +14,11 @@
  * # limitations under the License.
  */
 
-package limitlessInfinite.tictactoe;
+package limitlessInfinite.tictactoe.component;
 
-public class WinnerVerifier {
-    public boolean isUserWin(final GameTable gameTable) {
-        return false;
-    }
+import limitlessInfinite.tictactoe.model.GameTable;
 
-    public boolean isComputerWin(final GameTable gameTable) {
-        return false;
+public class UserMove {
+    public void make(final GameTable gameTable) {
     }
 }

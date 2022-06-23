@@ -14,7 +14,9 @@
  * # limitations under the License.
  */
 
-package limitlessInfinite.tictactoe;
+package limitlessInfinite.tictactoe.component;
+
+import limitlessInfinite.tictactoe.model.GameTable;
 
 import java.util.Random;
 

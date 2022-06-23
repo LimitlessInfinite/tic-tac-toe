@@ -14,7 +14,11 @@
  * # limitations under the License.
  */
 
-package limitlessInfinite.tictactoe;
+package limitlessInfinite.tictactoe.component;
 
-public class GameTable {
+import limitlessInfinite.tictactoe.model.GameTable;
+
+public class ComputerMove {
+    public void make(GameTable gameTable) {
+    }
 }

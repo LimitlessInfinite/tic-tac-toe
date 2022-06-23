@@ -14,10 +14,7 @@
  * # limitations under the License.
  */
 
-package limitlessInfinite.tictactoe;
+package limitlessInfinite.tictactoe.model;
 
-public class DrawVerifier {
-    public boolean isDraw(final GameTable gameTable) {
-        return false;
-    }
+public class GameTable {
 }
