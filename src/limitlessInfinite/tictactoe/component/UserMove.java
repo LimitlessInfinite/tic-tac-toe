@@ -16,9 +16,42 @@
 
 package limitlessInfinite.tictactoe.component;
 
+import limitlessInfinite.tictactoe.model.Cell;
 import limitlessInfinite.tictactoe.model.GameTable;
 
+import java.util.Scanner;
+
 public class UserMove {
+    private final char[][] table = {
+            {'7', '8', '9'},
+            {'4', '5', '6'},
+            {'1', '2', '3'}
+    };
+
     public void make(final GameTable gameTable) {
+        while (true) {
+            final Cell cell = getUserInput();
+            if (gameTable.isEmpty(cell)) {
+                gameTable.setSign(cell, 'X');
+                return;
+            } else System.out.println("Can't make move, because the cell is not free!");
+
+        }
+    }
+
+    private Cell getUserInput() {
+        while (true) {
+            System.out.println("Please type number between 1 and 9: ");
+            final String getUserInput = new Scanner(System.in).next();
+            if (getUserInput.charAt(0) >= '1' & getUserInput.charAt(0) <= '9' & getUserInput.length() == 1) {
+                for (int i = 0; i < 3; i++) {
+                    for (int j = 0; j < 3; j++) {
+                        if (getUserInput.charAt(0) == table[i][j]) {
+                            return new Cell(i, j);
+                        }
+                    }
+                }
+            } else System.out.println("Please type number between 1 and 9: ");
+        }
     }
 }
