@@ -19,11 +19,11 @@ package limitlessInfinite.tictactoe.component.keypad;
 import limitlessInfinite.tictactoe.component.CellNumberConverter;
 import limitlessInfinite.tictactoe.model.Cell;
 
-public class DesktopNumericKeypadCellNumberConverter implements CellNumberConverter {
+public class TerminalNumericKeypadCellNumberConverter implements CellNumberConverter {
     private final char[][] table = {
-            {'7', '8', '9'},
+            {'1', '2', '3'},
             {'4', '5', '6'},
-            {'1', '2', '3'}
+            {'7', '8', '9'}
     };
 
     @Override
@@ -42,5 +42,4 @@ public class DesktopNumericKeypadCellNumberConverter implements CellNumberConver
     public char toNumber(Cell cell) {
         return table[cell.getRow()][cell.getCol()];
     }
-
 }

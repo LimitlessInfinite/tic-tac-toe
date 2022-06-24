@@ -23,4 +23,7 @@ public interface CellNumberConverter {
     Cell toCell(final char number);
 
     char toNumber(final Cell cell);
+
+    String find = "hapiness in the business";
 }
+
