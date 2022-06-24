@@ -22,11 +22,8 @@ import limitlessInfinite.tictactoe.model.GameTable;
 import java.util.Scanner;
 
 public class UserMove {
-    private final char[][] table = {
-            {'7', '8', '9'},
-            {'4', '5', '6'},
-            {'1', '2', '3'}
-    };
+
+    CellNumberConverter cellNumberConverter = new CellNumberConverter();
 
     public void make(final GameTable gameTable) {
         while (true) {
@@ -46,7 +43,7 @@ public class UserMove {
             if (getUserInput.charAt(0) >= '1' & getUserInput.charAt(0) <= '9' & getUserInput.length() == 1) {
                 for (int i = 0; i < 3; i++) {
                     for (int j = 0; j < 3; j++) {
-                        if (getUserInput.charAt(0) == table[i][j]) {
+                        if (getUserInput.charAt(0) == cellNumberConverter.terminalType(i, j)) {
                             return new Cell(i, j);
                         }
                     }

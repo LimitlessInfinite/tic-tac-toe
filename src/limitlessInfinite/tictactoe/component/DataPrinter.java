@@ -22,7 +22,7 @@ import limitlessInfinite.tictactoe.model.GameTable;
 public class DataPrinter {
 
     public void printMappingTable() {
-        System.out.println("-".repeat(13) + "\n| 7 | 8 | 9 |" + "\n" + "-".repeat(13) + "\n| 4 | 5 | 6 |" + "\n" + "-".repeat(13) + "\n| 1 | 2 | 3 |" + "\n" + "-".repeat(13));
+      CellNumberConverter cellNumberConverter = new CellNumberConverter().printTerminalTable();
 
     }
 
