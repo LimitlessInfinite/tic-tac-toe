@@ -16,34 +16,11 @@
 
 package limitlessInfinite.tictactoe.component;
 
-public class CellNumberConverter {
-    public char consoleType(int row, int col) {
-        final char[][] table = {
-                {'7', '8', '9'},
-                {'4', '5', '6'},
-                {'1', '2', '3'}
-        };
-        return table[row][col];
-    }
+import limitlessInfinite.tictactoe.model.Cell;
 
-    public char terminalType(int row, int col) {
-        final char[][] table = {
-                {'1', '2', '3'},
-                {'4', '5', '6'},
-                {'7', '8', '9'}
-        };
-        return table[row][col];
-    }
+public interface CellNumberConverter {
 
-    public CellNumberConverter printConsoleTable() {
-        System.out.println("-".repeat(13) + "\n| 7 | 8 | 9 |" + "\n" + "-".repeat(13) + "\n| 4 | 5 | 6 |" + "\n" + "-".repeat(13) + "\n| 1 | 2 | 3 |" + "\n" + "-".repeat(13));
+    Cell toCell(final char number);
 
-        return null;
-    }
-
-    public CellNumberConverter printTerminalTable() {
-        System.out.println("-".repeat(13) + "\n| 1 | 2 | 3 |" + "\n" + "-".repeat(13) + "\n| 4 | 5 | 6 |" + "\n" + "-".repeat(13) + "\n| 7 | 8 | 9 |" + "\n" + "-".repeat(13));
-
-        return null;
-    }
+    char toNumber(final Cell cell);
 }

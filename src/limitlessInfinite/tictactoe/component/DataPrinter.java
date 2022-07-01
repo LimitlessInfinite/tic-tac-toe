@@ -20,11 +20,23 @@ import limitlessInfinite.tictactoe.model.Cell;
 import limitlessInfinite.tictactoe.model.GameTable;
 
 public class DataPrinter {
+    public DataPrinter(CellNumberConverter cellNumberConverter) {
+        this.cellNumberConverter = cellNumberConverter;
+    }
+
+    private final CellNumberConverter cellNumberConverter;
 
     public void printMappingTable() {
-      CellNumberConverter cellNumberConverter = new CellNumberConverter().printTerminalTable();
-
+        for (int i = 0; i < 3; i++) {
+            System.out.println("-".repeat(13));
+            for (int j = 0; j < 3; j++) {
+                System.out.print("| " + cellNumberConverter.toNumber(new Cell(i, j)) + " ");
+            }
+            System.out.println("|");
+        }
+        System.out.println("-".repeat(13));
     }
+
 
     public void printGameTable(final GameTable gameTable) {
 

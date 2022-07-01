@@ -23,7 +23,11 @@ import java.util.Scanner;
 
 public class UserMove {
 
-    CellNumberConverter cellNumberConverter = new CellNumberConverter();
+    public UserMove(CellNumberConverter cellNumberConverter) {
+        this.cellNumberConverter = cellNumberConverter;
+    }
+
+    private final CellNumberConverter cellNumberConverter;
 
     public void make(final GameTable gameTable) {
         while (true) {
@@ -41,13 +45,7 @@ public class UserMove {
             System.out.println("Please type number between 1 and 9: ");
             final String getUserInput = new Scanner(System.in).next();
             if (getUserInput.charAt(0) >= '1' & getUserInput.charAt(0) <= '9' & getUserInput.length() == 1) {
-                for (int i = 0; i < 3; i++) {
-                    for (int j = 0; j < 3; j++) {
-                        if (getUserInput.charAt(0) == cellNumberConverter.terminalType(i, j)) {
-                            return new Cell(i, j);
-                        }
-                    }
-                }
+                return cellNumberConverter.toCell(getUserInput.charAt(0));
             } else System.out.println("Please type number between 1 and 9: ");
         }
     }
